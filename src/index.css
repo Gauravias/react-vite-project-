@@ -1,0 +1,45 @@
+/* src/index.css */
+
+/* 1. Font Import: Imports the 'Inter' font family from Google Fonts.
+   2. Global Variables (Theming): Defines colors for light and dark modes.
+   3. Base Body Styles: Sets up the default font, background, and text colors.
+   4. Dark Mode Theme: Applies dark theme styles when the 'dark' class is on the body.
+   5. Universal Container: A helper class for consistent content width and padding.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --background-light: #ffffff;
+  --background-dark: #111827; /* gray-900 */
+  --text-light: #1f2937; /* gray-800 */
+  --text-dark: #f9fafb; /* gray-50 */
+  --card-background: #ffffff;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-light); /* Use variable */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode theme styles */
+body.dark {
+  --background-light: #111827;
+  --text-light: #f9fafb;
+  --card-background: #1f2937; /* gray-800 */
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+}
+
+/* Universal container for consistent spacing */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}

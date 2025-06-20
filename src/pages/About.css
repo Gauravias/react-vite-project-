@@ -1,0 +1,171 @@
+/* src/pages/About.css */
+
+.about-page {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Hero Section */
+.about-hero {
+  text-align: center;
+  padding: 6rem 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop') no-repeat center center/cover;
+  color: white;
+}
+
+.about-hero .hero-title {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-hero .hero-subtitle {
+  color: #e5e7eb; /* gray-200 */
+}
+
+/* Our Story Section */
+.our-story-section {
+    padding: 6rem 0;
+    background-color: var(--card-background);
+}
+
+.story-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: var(--card-shadow);
+}
+
+.story-text h2 {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.story-text p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #6b7280;
+}
+
+body.dark .story-text p {
+    color: #d1d5db;
+}
+
+/* Our Values Section */
+.our-values-section {
+    padding: 6rem 0;
+    background-color: var(--background-light);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.value-card {
+    text-align: center;
+}
+
+.value-icon {
+    display: inline-flex;
+    padding: 1rem;
+    background-color: #dbeafe; /* blue-100 */
+    color: #2563eb;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.value-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.value-description {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+body.dark .value-description {
+    color: #d1d5db;
+}
+
+
+/* Team Section */
+.team-section {
+  padding: 6rem 0;
+}
+
+.team-section .section-subtitle {
+    margin-bottom: 4rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.team-member-card {
+  text-align: center;
+}
+
+.team-member-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 0 0 5px var(--card-background), 0 0 0 7px #d1d5db;
+}
+
+body.dark .team-member-image {
+    box-shadow: 0 0 0 5px var(--card-background), 0 0 0 7px #4b5563;
+}
+
+
+.team-member-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.team-member-title {
+  color: #2563eb;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.team-member-socials {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.team-member-socials a {
+  color: #6b7280;
+  transition: color 0.3s ease;
+}
+
+.team-member-socials a:hover {
+  color: #2563eb;
+}
+
+/* Join Us CTA */
+.join-us-cta {
+  background-color: #1e3a8a; /* A darker blue */
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .story-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
